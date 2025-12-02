@@ -453,6 +453,69 @@ section{
     animation: logo 9s ease-in-out infinite;
 }
 
+/* Container audio */
+.audio {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    box-sizing: border-box;
+
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(220, 220, 220, 0.6);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Lecteur audio */
+.audio audio {
+    width: 100%;
+    height: 50px;               /* parfait pour mobile */
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    background: rgba(255,255,255,0.9);
+
+    padding: 0;
+    margin: 0;
+}
+
+/* Chrome - bouton + barre */
+audio::-webkit-media-controls-panel {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button {
+    filter: brightness(0.7);
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #444;
+}
+
+/* 🌐 Responsive amélioré */
+@media (max-width: 480px) {
+    .audio {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .audio audio {
+        height: 45px;   /* plus petit sur petits smartphones */
+    }
+}
+
+
 /*footer*/
 .footer{
     width: 100%;

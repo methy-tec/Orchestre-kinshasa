@@ -116,6 +116,11 @@ Orchestre de Kinshasa</h1>
             </div>
         </section>
     </div>
+    
+    <div class="audio">
+        <audio id="player" src="./mp3/Violon.mp3" controls autoplay></audio>
+    </div>
+
     <div>
         <footer class="footer">
             <p>&copy; 2023 Orchestre de Kinshasa. Tous droits réservés.</p>
@@ -123,6 +128,23 @@ Orchestre de Kinshasa</h1>
     </div>
 
     <script src="animation.js"></script>
+    <script>
+        // Quand la page charge
+        window.addEventListener("load", () => {
+            const audio = document.getElementById("player");
+
+            // Essaye de jouer automatiquement
+            audio.play().then(() => {
+                // Si ça marche, on active le son après 1 seconde
+                setTimeout(() => {
+                    audio.muted = false;
+                }, 1000);
+            }).catch(err => {
+                console.log("Autoplay bloqué 😅 (il faut un clic)");
+            });
+        });
+    </script>
+
 	<script async="async" data-cfasync="false" src="//pl28174895.effectivegatecpm.com/ec2989b6c67510664beb2f899af69c35/invoke.js"></script>
 <div id="container-ec2989b6c67510664beb2f899af69c35"></div>
 </body>
