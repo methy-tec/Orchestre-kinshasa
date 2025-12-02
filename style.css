@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('./img/logo1.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Navbar fixe */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgba(246, 242, 242, 0.293);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+}
+
+/* Logo dans navbar */
+.logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    animation: logo 2s ease-in-out infinite;
+}
+
+/* Menu */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #d49a2a;
+    text-decoration: underline;
+}
+.container{
+    width: auto;
+    height: auto;
+}
+/* Contenu principal : décalé pour navbar */
+.container, header, section {
+    margin-top: 150px; /* hauteur navbar */
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    backdrop-filter: blur(3px);
+    border-bottom: 2px solid #333;
+    border-radius: 20px;
+}
+.header-content{
+    margin-top: 200px;
+}
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 40px;
+    animation: h1 2s ease-in-out infinite;
+}
+
+/* Bouton */
+.btn-accueil {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #acacac;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.btn-accueil:hover {
+    background-color: #d49a2a;
+}
+
+/* Section Présentation */
+section{
+    margin-top: 130px;
+    border-top: 2px solid #333;
+    overflow: hidden;
+
+}
+
+/* Présentation  et Contact*/
+#presentation, #contact {
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+}
+.presentation-content, .contact-content {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 100px;
+    gap: 20px;
+}
+.presentation-content .left, .contact-content .contact-left{
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.presentation-content .left .image, .contact-content .contact-left .image{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 30px;
+    margin-left: 30px;
+    overflow: hidden;
+    margin-left: 20%;
+}
+.presentation-content .right, .contact-content .contact-right{
+    width: 70%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    perspective: 1500px; /*Effet 3D */
+    overflow: hidden;
+}
+.logo-img-2 {
+    width: 100%;
+    border-radius: 10px;
+}
+.logo-img-6{
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+
+.livre {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #d4c9b1;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    background-color: 0 4 12px rgba(0,0,0,0.2);
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    animation: ouvrirLivre 1.5s ease forwards;
+}
+.livre::before, .livre::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    width: 50%; 
+    height: 100%; 
+    background: linear-gradient(to right, rgba(0,0,0,0.09), transparent); 
+    z-index: 1; 
+}
+.livre::before { 
+    left: 0; 
+    transform: skewY(-0.5deg); 
+} 
+.livre::after { 
+    right: 0; 
+    transform: skewY(0.5deg); 
+}
+.livre h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.contact-right h2 {
+    text-align: left;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 25px;
+    color: #000000;
+}
+.contact-right p{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.contact-right p a{
+    text-decoration: none;
+    color: #000000;
+}
+.contact-right p a:hover{
+    color: #d49a2a;
+}
+.contact-right p i{
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #d49a2a;
+}
+
+.livre p {
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    color: #fff;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Objectif */
+#objectif{
+    width: 100%;
+    height: 90%;
+    margin:0 auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    
+}
+
+.objectif-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.objectif-left{
+    width: 70%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #333;
+    border-radius: 10px;
+}
+.objectif-left h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.objectif-left p{
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    color: #fff;
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(252, 251, 251, 0.2);
+}
+.objectif-right{
+    width: 70%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.objectif-right .image{
+    width: 450px;        /* largeur fixe */
+    height: 350px; 
+    border-radius: 10px;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+}
+/* Images du slider */
+.logo-img-4 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+/* Image visible */
+.logo-img-4.active {
+    opacity: 1;
+    position: relative;
+}
+/* Les petits points */
+.dots {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dots .dot {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots .dot.active {
+    background: #d49a2a;
+}
+
+.objectif-right .bouttone{
+    width: 70%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    display: flex;
+}
+.objectif-right .bouttone button{
+    padding: 10px 20px;
+    background-color: #acacac;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.objectif-right .bouttone .next:hover{
+    background-color: rgb(43, 43, 219);
+}
+.objectif-right .bouttone .prev:hover{
+    background-color: rgb(238, 51, 51);
+}
+
+/* Valeurs */
+#valeurs{
+    width: 100%;
+    height: 90%;
+    margin:0 auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+}
+.valeurs-content{
+    width: 100%;
+    height: 100%;
+    display: inline;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    margin-left: 10%;
+}
+.valeurs-content h2{
+    justify-items: left;
+    text-align: left;
+    margin-left: 10%;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.valeurs-content p{
+    text-align: left;
+    justify-items: left;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(252, 251, 251, 0.2);
+    width: 650px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(252, 251, 251, 0.2);
+}
+
+.valeurs-content .image{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-around;
+    justify-items: center;
+    box-shadow: 0 4px 10px rgba(252, 251, 251, 0.2);
+    overflow: hidden;
+}
+.valeurs-content .image .logo-img-5{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 7%;
+    transition: transform 0.3s ease-in-out;
+}
+.valeurs-content .image .logo-img-5:hover{
+    transform: scale(1.1);
+}
+.logo-img-5:nth-child(1){
+    animation: logo 5s ease-in-out infinite;
+}
+.logo-img-5:nth-child(2){
+    animation: logo 7s ease-in-out infinite;
+}
+.logo-img-5:nth-child(3){
+    animation: logo 9s ease-in-out infinite;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+    z-index: 999;
+    margin-bottom: 0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    background-color: #ffffff47;
+}
+.footer p{
+    font-size: 13px;
+    z-index: 999;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fdfdfd;
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    justify-items: space-between;
+    margin-top: 5px;
+}
+
+/* Animation */ 
+
+/* Animation pour le logo */ 
+@keyframes logo { 
+    0% { 
+        transform: scale(1); 
+    } 50% { 
+        transform: scale(1.1); 
+    } 100% { 
+        transform: scale(1); 
+    } 
+} 
+/* Animation pour la navbar */ 
+@keyframes nav { 
+    0% { 
+        transform: translateX(-100%); 
+        opacity: 0; 
+    } 100% { 
+        transform: translateX(0); 
+        opacity: 1; 
+    } 
+} 
+/* Animation pour le h1 */ 
+@keyframes h1 { 
+    0% { 
+        transform: scale(1); 
+    } 50% { 
+        transform: scale(1.1); 
+    } 100% { 
+        transform: scale(1); 
+    } 
+}
+
+/* Animation d'ouverture */
+@keyframes ouvrirLivre {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(-150deg); }
+    100% { transform: rotateY(0deg); }
+}
+
+
+/* Animation opacity */
+@keyframes opacity {
+    0% { opacity: 0; 
+        background: none;
+    }
+    100% { opacity: 1;
+    }
+}
